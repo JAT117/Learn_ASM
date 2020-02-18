@@ -3,7 +3,7 @@
 	.size	v, 3
                            //v array
 v:
-	.xword	1, 2, 3        // 64-bit values
+	.xword	1, 2, 3    // 64-bit values
 
 
 	.text
