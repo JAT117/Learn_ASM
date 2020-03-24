@@ -1,11 +1,10 @@
 
 main:
-
-MOV R2, #1	@Register R aka remainder
-MOV R3, #0	@Register Q aka quotient
-MOV R4, #3	@Register X aka Divisor
-MOV R5, #4	@Register Y aka dividend
-MOV R6, #0	@Loop Counter
+	MOV R2, #1	@Register R aka remainder
+	MOV R3, #0	@Register Q aka quotient
+	MOV R4, #3	@Register X aka Divisor
+	MOV R5, #4	@Register Y aka dividend
+	MOV R6, #0	@Loop Counter
 
 LOOP:
 	MOV R2,R5 @Move Y into R
@@ -16,7 +15,6 @@ LOOP:
 	CMP R2, #0		@ if r0 <= r3
 	BGE GreaterThanZero		@ jump to res1 is r0 >= r3
 	B LessThanZero
-
 
 GreaterThanZero:
 	MOV R3, R3, LSL #0 @lsl once
@@ -35,26 +33,3 @@ LessThanZero:
 	B LOOP
     
 EXIT:
-
-Dark City
-Fire in the Sky
-Communion
-Under the skin
-Ghosts on mars
-the man who fell to earth
-Battle beyond the stars
-Starman
-Lifeforce
-Galaxy Quest
-Liquid Sky
-Five million years to earth
-Dune
-Krull
-
- 
-
-
-
-
-
-
