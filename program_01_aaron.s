@@ -54,8 +54,8 @@ main:
 	MessageB: .asciz "message_B: B > C and B > A"
 	MessageC: .asciz "message_C: C > B and C > A"
 	MessageError: .asciz "error"
-	a:		  .word 12
-	b: 		  .word 13
-	c:		  .word 115
+	a:	.word 12
+	b: 	.word 13
+	c:	.word 115
 
 	
