@@ -1,0 +1,10 @@
+moores law
+
+abstraction
+common case fast
+parallelism
+pipelining
+prediction
+memory hierarchy
+
+dependability via redundancy- mirroring data onto different data storage sources

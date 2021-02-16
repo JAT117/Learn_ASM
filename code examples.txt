@@ -1,0 +1,25 @@
+
+some C code:
+
+while(save[i] == k)  //(if false then exit)
+	i+=1;			 // if true increment i by 1 and loop
+
+// Assign registers for variales
+//X22 i
+//X24 k
+//S25 Save
+
+//LSL #3 => 2^3 = 8  logical shift left 3 spaces
+
+
+
+loop:
+	LSL X10, X22, #3	// temp register X10 = X22 * #8  (i*8)
+	ADD X10, X10, X25   // X10 = X10 + address of save[i]
+	LDUR X9, [X10, #0]  // X9 = save[i]
+
+	SUB X11, X9, X24    // X11 = save[i] - 1
+	CBNZ X11, Exit      // Exit if save[i] != k
+	ADDI X22, X22, #1   // i+=1
+	B loop				//branches to loop (recursive branch)
+Exit: ...

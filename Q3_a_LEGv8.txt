@@ -1,0 +1,25 @@
+// John Todd Homeworkd 3 problem 3a
+// I have both C and LEGv8 code placed top and bottom respectively.
+// Everything not ment to be code is commented out
+
+//C Code	
+	if (a > b) 
+		x[a] = b + c; 
+	else x[a] = b/2;
+
+//LEGv8 Code
+//X19 = a
+//X20 = b
+//X21 = c
+//X22 = x (base address)
+	
+	LSL X9, X19, #3    // reg X9_temp = a*8 [a]
+	ADD X9, X9, X22	   // reg X9_temp = address of x[a]
+	SUBS X10, X19, X20 // compares a to b
+	B.LTE Else		   // if a > b then branch to else
+	ADD X9, X20, X21   // X9 = X20 + X21 (X[a] = b + c)
+	
+Else:
+	LSR X11, X20, #1   //Logical right shift (divide b/2)
+	ADD X9, XZR, X11   //x[a] = b/2
+

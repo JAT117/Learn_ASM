@@ -1,0 +1,31 @@
+// John Todd Homework 3 problem 3c
+// I have both C and LEGv8 code placed top and bottom respectively.
+// Everything not ment to be code is commented out
+
+//C Code
+	while (x[i] == a) 
+	  if ((b - i) > 0) 
+	  i+=2; 
+
+//LEGv8 Code
+//X19 = a
+//X20 = b
+//X21 = c
+//X22 = x (base address)
+ 		
+	MOV X0, X1	      // set X0 to 0 (i = 0)
+
+  loop:
+	LSL X9, X0, #3	   // temp register X10 = X22 * #8  [i]
+	ADD X9, X9, X22    // X10 = X10 + address of x[i]
+
+	LDUR X9, [X10, #0] 
+	SUBS X10, X22, X19 // see if x[i] == a
+	
+	CBNZ X10, Exit     // Exit if x[i] != a
+	SUBS X11, X22, X0  // see if b - i > 0
+	B.LTE Exit		   // Exit if less 
+	
+	ADDI X0, X0, #2    // i+=2
+	B loop			//branches to loop (recursive branch)
+Exit: 	

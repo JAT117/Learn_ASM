@@ -1,0 +1,33 @@
+
+
+//C Code
+long long int fib(long long int n)
+	{
+		if (n = 0) return (0);
+		else return(fib(n) + fib(n + 1));  //recursion
+	}
+
+//LEGv8 Code
+//X19 n
+//X20 fib base address
+
+	MOV X19, X0			//set n to zero
+
+fib:
+	SUBI SP, SP, #16	// adjust Stack Pointer to push two items (offset 8 bits x2)
+	STUR LR, [SP, #8]	// store return address 
+	STUR X19, [SP, #0]	// save argument n
+	ADDIS XZR, X19, #1	// test conditions (n = 0)
+	B.EQ L1				// if n = 1 branch to L1
+	ADDI X1, XZR, #1	// return 1
+	ADDI SP, SP, #16	// Pop 2 items off stack
+	BR LR				// Return to caller
+
+L1 :
+	ADDI X0, X0, #1		// if n = 0, n++ (n + 1)
+	BL fib				// calls fib with (n + 1)
+	LDUR X0, [SP, #0]	// returns from BL restore argument n
+	LDUR LR, [SP, #8]	// restore the return address
+	ADDI SP, SP, #16	// adjust Stack Pointer to pop two items
+	ADD, X1, X0, X1		// return fib(n) + fib(n+1)
+	BR LR				// return to caller

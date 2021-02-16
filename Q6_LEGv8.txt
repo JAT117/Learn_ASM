@@ -1,0 +1,20 @@
+// John Todd Homework 3 problem 6
+// I have both C and LEGv8 code placed top and bottom respectively.
+// Everything not ment to be code is commented out
+
+//C Code
+unsigned long long int pwr(unsigned long long int, unsigned long long int)
+{ 
+ long long int result;
+	result = x * y;
+   return result;
+ }
+
+//LEGv8 Code
+//X0 x
+//X1 y
+//X2 result
+
+ADDI X0, X0, #constant
+ADDI X1, X1, #constant
+MUL X2, X0, X1
