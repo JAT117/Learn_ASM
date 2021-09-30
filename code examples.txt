@@ -1,5 +1,4 @@
-
-some C code:
+//Some C code:
 
 while(save[i] == k)  //(if false then exit)
 	i+=1;			 // if true increment i by 1 and loop
@@ -10,8 +9,6 @@ while(save[i] == k)  //(if false then exit)
 //S25 Save
 
 //LSL #3 => 2^3 = 8  logical shift left 3 spaces
-
-
 
 loop:
 	LSL X10, X22, #3	// temp register X10 = X22 * #8  (i*8)

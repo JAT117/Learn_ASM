@@ -13,7 +13,6 @@ int Series(int x, int a)
 	return sum;
 }
 
-
 int main()
 {
 	int x, a,y;

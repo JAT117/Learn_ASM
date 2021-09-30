@@ -1,6 +1,4 @@
 /*
-John Todd
-
 prog2.c
 
 Programming Assignment #2 (First Program)
@@ -8,12 +6,10 @@ CSCE 2610 001
 Summer 2016
 Assembly Language and Computer Organization
 
-
 C code  finding user inputed numbers and calculating the sum, mean, median, and range
 Using unsigned 64 bit long long integers, except range and median.
 
 */
-
 
 #include <stdio.h>
 
@@ -30,7 +26,6 @@ int main(void)
 	{
 		scanf("%llu", &array[i]);
 	}
-
 
 	/*   Bubble Sort, to help make it easier to find what we are looking for */
 

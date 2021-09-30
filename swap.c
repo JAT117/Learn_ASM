@@ -10,14 +10,12 @@ swap(int v[], int k)
 //X1 k
 //X9 temp
 
-
 swap:
-	//First step is to get ze address of V[k] by multiplyin by 8 via left shift
+	//First step is to get address of V[k] by multiplying by 8 via logical shift left (LSL)
 
     LSL X10,X1, #3		//X10 = k * 8
 	ADD X10, X0, X10	//X10 = v + (k * 8)
 						//which makes reg X10 have the address of v[k]
-
 
 	// Now load v[k] using X10
 

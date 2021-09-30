@@ -6,8 +6,6 @@ long long int f;
 	return f;
 }
 
-
-
 X0 g
 X1 h
 X2 i
@@ -15,8 +13,6 @@ X3 j
 
 X9 and X10 are temp registers
 X31 is the stack pointer (SP), which we will push
-
-
 
 SUBI SP, SP, #24	// since a byte is 8 bits, 3 doublewords are 24 bits long
 STUR X10, [SP, #16]	// store X10 for later use
@@ -35,4 +31,3 @@ LDUR X10, [SP, #16]
 ADDI SP, SP, #24 // Adjust Stack to release regiter
 
 BR LR // Break
-

@@ -5,8 +5,6 @@ long long int fact(long long int n)
 	else return(n* fact(n - 1));  //recursion
 }
 
-
-
 fact:
 	SUBI SP, [SP, #16]	//adjust stack pointer for two items
 	STUR LR, [SP, #8]	//Store return address 
@@ -28,9 +26,7 @@ L1:
 	MUL, X1, X0, X1		// Return n * fact(n-1)
 	BR LR				// Return to caller
 
-
 ///////////////////////////////
-
 long long int fib(long long int n)
 	{
 		if (n > 1) return (1);

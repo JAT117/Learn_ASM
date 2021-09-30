@@ -1,4 +1,3 @@
-// John Todd Homework 3 problem 6
 // I have both C and LEGv8 code placed top and bottom respectively.
 // Everything not ment to be code is commented out
 

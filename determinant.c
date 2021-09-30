@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-
-
 void determ(int matrix[3][3])
 {
     int D = 0; // temp for storing determinant
@@ -9,7 +7,6 @@ void determ(int matrix[3][3])
     //this equation is to calculate the determinant of input argument
     printf("%d\n", D); //finally printing result to the user
 }
-
 
 int main()
 {
@@ -32,11 +29,8 @@ int main()
     printf("The determant of given matrix is:");
     determ(matrix); // Calling determ function for given matrix determinant
 
-
     printf("The determant of transposed matrix is:");
     determ(matrixT); // Calling determ function for transpose matrix determinant
-
-
     return 0;
 }
 

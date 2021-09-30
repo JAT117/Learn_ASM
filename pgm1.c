@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 
 int main()
@@ -19,15 +17,10 @@ int main()
 };
 
 /*
-
 LEGv8 code for adding up the natural numbers to user defined n
-
-
  X19 n ->
  X20 sum ->
  X21 i ->
-
-
 	ADDI X19,X19, #0  //set n to 0 in X19
 	ADDI X20,X20, #0  //set sum to 0 in X20
 	ADDI X21,X21, #0  //set i to 0 in X21
@@ -49,7 +42,6 @@ Exit: ...
 */
 
 
-
 // X19 n ->
 // X20 sum ->
 // X21 i ->
@@ -63,7 +55,6 @@ loop:
 	 ADD X20,X20, X10
 	 ADD X10,X10, #1
 	 B Loop
-   DDDWADWDSDWDADdWDA2E23Q423Q2DQ32EQDAWEQ5DWD
 Exit: ....
 
 */

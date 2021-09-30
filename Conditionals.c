@@ -1,5 +1,4 @@
-
-some C code:
+//Some C code:
 
 while(save[i] == k)  //(if false then exit)
 	i+=1;			 // if true increment i by 1 and loop
@@ -10,8 +9,6 @@ while(save[i] == k)  //(if false then exit)
 //X25 Save
 
 //LSL #3 => 2^3 = 8  logical shift left 3 spaces
-
-
 
 loop:
 	LSL X10, X22, #3	// temp register X10 = X22 * #8  (i*8)
@@ -24,8 +21,7 @@ loop:
 
 Exit: ...
 
-		
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
 C code :
 	if (i == j) 
 		f = g + h;
@@ -47,7 +43,7 @@ Else:
 
 Exit:
 
-
+////////////////////////////////////////////////////////////////////////////////////////////
 	//X19 a
 	//X20 b
 	//X21 c B.A
@@ -55,15 +51,14 @@ Exit:
 	b = a + b
 		c[a] = b + 4
 
-		ADD X20, X19, X20   //b = a + b     	ADD X20, X19, X20   //b = a + b
-		ADD X9, X20, #4		//X9 = b + 4		ADDI X9, X20, #4   //X9 = b + 4
-		LSL X10, X19, X3	//X10 = a*8 		ADDI X11, XZR, #8  //X11 = 0 + 8
-		ADD X10, X21, X10	//X10 = c + a*8		MUL X10, X19, X11  //X10 = a * 8
-		STUR X9, [X10, #0]	//C					ADD X10, X21, X10  // 
-		STUR X9, [X10, #0]  //
+	ADD X20, X19, X20   //b = a + b     	ADD X20, X19, X20   //b = a + b
+	ADD X9, X20, #4		//X9 = b + 4		ADDI X9, X20, #4   //X9 = b + 4
+	LSL X10, X19, X3	//X10 = a*8 		ADDI X11, XZR, #8  //X11 = 0 + 8
+	ADD X10, X21, X10	//X10 = c + a*8		MUL X10, X19, X11  //X10 = a * 8
+	STUR X9, [X10, #0]	//C					ADD X10, X21, X10  // 
+	STUR X9, [X10, #0]  //
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-
 
 Jump uses word address
 • Update PC	with concatenation of

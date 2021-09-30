@@ -15,18 +15,13 @@
 //X0 v array
 //X15 is constant 50
 //X16 i
-        
-    
-    
-    
-    
+   
     .data
 	.type	v, %object
 	.size	v, n           // how do we input 'n' numbers
                            //v array
 v:
 	.xword	n              // 'n' number of 64-bit values
-
 
 	.text
 	.global	main
@@ -50,11 +45,7 @@ main:
     B.LE exit
     ADRP X0, v            // Load the array address to X0
 	ADD X0, X0, :lo12:v   // End address
-    
-    
-    
-    
-    
+
     SUBS XZR, X16, X20 // if i > n
     B.LE exit
     
@@ -77,8 +68,6 @@ Loop1:                 // this is some code used to fine the min and max of the 
 	ADD X20, X20, X12
     ADDI X21,X21,#1   //increment i
 
-
-
 Loop2: 	
 	ADD  X20,X20,X21  //sum = sum + i
 	SUBS X9,X19,X21   //compare n and i
@@ -86,16 +75,9 @@ Loop2:
 	ADDI X21,X21,#1   //increment i
 	B    Loop2         //loop
     
-    
-    
-    
     UDIV X21, X20, X21 //mean = sum / n
-    
-    
     
     SUB X23,          //range = v[last] - v[first]
     UDIV X22, X23, #1 //median - range / 2
-    
 
-    
 exit:

@@ -8,9 +8,6 @@ long long int sum(long long int n, long long int acc)
 		return acc;
 }
 
-
-
-
 //X0 sum
 //X1 acc
 //X2 n result of the call
@@ -24,5 +21,4 @@ sum:
 
 sum_exit:
 	ADD X2, X1, XZR     // return value of acc
-	BR LR               // return to caller
-
+	BR LR               // return to calle

@@ -1,4 +1,3 @@
-// John Todd Homework 3 problem 3c
 // I have both C and LEGv8 code placed top and bottom respectively.
 // Everything not ment to be code is commented out
 
@@ -15,7 +14,7 @@
  		
 	MOV X0, X1	      // set X0 to 0 (i = 0)
 
-  loop:
+loop:
 	LSL X9, X0, #3	   // temp register X10 = X22 * #8  [i]
 	ADD X9, X9, X22    // X10 = X10 + address of x[i]
 
